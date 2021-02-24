@@ -1,0 +1,32 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+ 
+int main(){
+
+    int pass,ulang,a;
+    int * p;
+
+    p = &pass;
+    *p = 123;
+
+    p = &ulang;
+    *p = 3;
+    do{
+    cout << endl;
+    cout << "masukan password :";
+    cin >> a;
+       if (a == pass){
+      system ("cls");
+     cout << "login berhasil";
+     return 0; } 
+       else{
+      cout << "password salah"<<endl;
+      cout << "kesempatan ada sisa: " << ulang << endl;
+      ulang = ulang - 1; }
+    }while( ulang >= 0);
+    cout << endl;
+    cout << "kesempatan anda habis"<<endl;
+    cout << "wajar lupa, faktor usia";
+    return 0;
+}
